@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geo-Map</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="./main.js"></script>
+
+
+</head>
+
+<body>
+    <div>Vị trí hiện tại: <span id="currentPosition"></span></div>
+    <div>
+        <select onchange="searchMap(this.value)">
+            <option value="">Chọn địa điểm</option>
+            <option value="cafe">Quán cafe</option>
+            <option value="food">Quán ăn</option>
+            <option value="hospital">Bệnh viện</option>
+            <option value="bank">Ngân hàng</option>
+            <option value="atm">Cây ATM</option>
+            <option value="bus_station">Trạm xe buýt</option>
+            <option value="museum">Bảo tàng</option>
+            <option value="park">Công viên</option>
+            <option value="parking">Chỗ đỗ xe</option>
+        </select>
+    </div>
+    <div id="map" style="width:100%; height:80%; position:absolute; bottom:0; left:0; background-color:#666;"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpuhPAXBFKTzK1P7n9vSW87mZtZBSG408&libraries=places&callback=showMap">
+    </script>
+    
+</body>
+
+</html>
